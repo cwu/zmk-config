@@ -22,7 +22,6 @@
         behaviors {
             shft_cw: shift_capsword {
                     compatible = "zmk,behavior-tap-dance";
-                    label = "SHIFT_
                     label = "STICKY_SHIFT_DOUBLE_TAP_CAPWORD";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
