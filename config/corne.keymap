@@ -38,7 +38,7 @@
                     #binding-cells = <0>;
                     bindings = <&kp ESC>, <&kp GRAVE>;
                     mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
-                    keep-mod = <(MOD_LGUI|MOD_RGUI)>;
+                    keep-mods = <(MOD_LGUI|MOD_RGUI)>;
           };
         };
 
