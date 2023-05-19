@@ -16,7 +16,7 @@
 #define CONFIG  3
 
 &mt {
-    tapping-term-ms = <400>;
+    tapping-term-ms = <500>;
 };
 
 &sl {
