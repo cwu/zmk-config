@@ -11,16 +11,16 @@
 
 
 #define DEFAULT 0
-#define LOWER   1
+#define MOVE    1
 #define RAISE   2
 #define CONFIG  3
 
 &mt {
-    tapping-term-ms = <500>;
+    tapping-term-ms = <400>;
 };
 
 &sl {
-    release-after-ms = <2000>;
+    release-after-ms = <3000>;
 };
 
 / {
@@ -77,21 +77,21 @@
    &kp TAB   &kp Q &kp W &kp E      &kp R      &kp T   &kp Y &kp U       &kp I           &kp O       &kp P    &kp BSPC
    &gresc    &kp A &kp S &kp D      &kp F      &kp G   &kp H &kp J       &kp K           &kp L       &kp SEMI &kp SQT
    &shift_cw &kp Z &kp X &kp C      &kp V      &kp B   &kp N &hm LGUI M  &hm LALT COMMA  &kp DOT  &kp FSLH &sk RALT
-                        &sk LGUI &kp SPACE &shift_cw   &kp RET &sl RAISE &sk RCTRL
+                        &sk LGUI &kp SPACE &sk LSHIFT   &kp RET &sl RAISE &sk RCTRL
                         >;
                 };
 
-                lower_layer {
+                move_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | CTRL |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans  &kp N4       &kp N5       &kp N6       &kp N0       &trans         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &trans  &kp N7       &kp N8       &kp N9       &kp DOT      &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &trans     &trans       &trans      &trans  &mo CONFIG   &trans
+   &trans       &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+   &to DEFAULT  &kp N4       &kp N5       &kp N6       &kp N0       &trans         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &trans       &kp N7       &kp N8       &kp N9       &kp DOT      &trans         &trans   &trans   &trans &trans    &trans &trans
+                           &trans     &trans  &trans      &trans  &mo CONFIG   &trans
                         >;
                 };
 
@@ -102,10 +102,10 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
-   &trans &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &trans &kp N6   &kp N7 &kp N8   &kp N9   &kp N0      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &trans &mo CONFIG   &trans   &trans   &sl LOWER   &trans
+   &trans      &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+   &to DEFAULT &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &trans      &kp N6   &kp N7 &kp N8   &kp N9   &kp N0      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                             &trans &mo CONFIG   &trans   &trans   &sl MOVE   &trans
                         >;
                 };
 
@@ -116,9 +116,9 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &none        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR &none   &none   &none    &none   &none
-   &sys_reset   &none        &none        &none        &kp N0       &none          &none      &none   &none   &none    &none   &sys_reset
-   &bootloader  &out OUT_BLE &out OUT_USB &none        &none        &none          &none      &none   &none   &none    &none   &bootloader
+   &sys_reset    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR &none   &none   &none    &none   &sys_reset
+   &to DEFAULT   &none        &none        &none        &kp N0       &none          &none      &none   &none   &none    &none   &none
+   &bootloader   &out OUT_BLE &out OUT_USB &none        &none        &none          &none      &none   &none   &none    &none   &bootloader
                                     &none     &trans       &none      &none  &trans   &none
                         >;
                 };
