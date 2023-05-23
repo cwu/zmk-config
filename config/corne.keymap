@@ -110,18 +110,18 @@
 // | SHFT |     |     |     |     |     |   |        |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT    |     | ALT |
                         bindings = <
-&sys_reset  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR &none   &none   &none  &sys_reset  &none   
-&none       &to DEFAULT  &none        &none         &kp N0       &none          &none      &none   &none   &none  &none       &none   
-&none       &bootloader  &out OUT_BLE &out OUT_USB  &none        &none          &none      &none   &none   &none  &bootloader &none   
+&sys_reset  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR &none   &none   &none  &sys_reset  &none
+&none       &to DEFAULT  &none        &none         &kp N0       &none          &none      &none   &none   &none  &none       &none
+&none       &bootloader  &out OUT_BLE &out OUT_USB  &none        &none          &none      &none   &none   &none  &bootloader &none
                                               &none     &trans   &none          &none  &trans   &none
                         >;
                 };
 
                 mod_layer {
                         bindings = <
-&none  &kp TAB     &none      &none    &none    &none     &none kpLCA(U)    kpLCA(I)    kpLCA(O)     &none &kp BSPC &none
-&none  &gresc      &sk LCTRL  &sk LALT &sk LGUI &none     &none kpLCA(J)    kpLCA(K)    kpLCA(L)     &none &kp RET  &none
-&none  &sk LSHIFT  &none      &none    &none    &none     &none kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) &none &none    &none
+&none  &kp TAB     &none      &none    &none    &none     &none kpLCA(U)    kpLCA(I)    kpLCA(O)     &kp BSPC &none
+&none  &gresc      &sk LCTRL  &sk LALT &sk LGUI &none     &none kpLCA(J)    kpLCA(K)    kpLCA(L)     &kp RET  &none
+&none  &sk LSHIFT  &none      &none    &none    &none     &none kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) &none    &none
                            &none   &to DEFAULT  &none     &none  &none  &none
                         >;
                 };
