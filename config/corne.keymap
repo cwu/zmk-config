@@ -40,12 +40,12 @@
                     tapping-term-ms = <200>;
                     bindings = <&sk LSHIFT>, <&caps_word>;
            };
-           sl_to: sticky_layer_to_layer {
+           sl_to_raise: sticky_layer_to_layer_raise {
                     compatible = "zmk,behavior-tap-dance";
-                    label = "STICKY_LAYER_DOUBLE_TAP_TO_LAYER";
-                    #binding-cells = <2>;
+                    label = "STICKY_LAYER_DOUBLE_TAP_TO_LAYER_RAISE";
+                    #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&sk>, <&to>;
+                    bindings = <&sk RAISE>, <&to RAISE>;
            };
            my_gresc: grave_escape {
                     compatible = "zmk,behavior-mod-morph";
@@ -87,7 +87,7 @@
      &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U &kp I      &kp O    &kp P    &kp BSPC
      &gresc    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K      &kp L    &kp SEMI &kp SQT
      &shift_cw &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA  &kp DOT  &kp FSLH &shift_cw
-  &sl MOD_MOVE &mt LG(SPACE) SPACE &shift_cw   &kp RET &sl_to RAISE &sk RCTRL
+  &sl MOD_MOVE &mt LG(SPACE) SPACE &shift_cw   &kp RET &sl_to_raise &sk RCTRL
                         >;
                 };
 
