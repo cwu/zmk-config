@@ -96,10 +96,10 @@
 
                 mod_move_layer {
                         bindings = <
-&trans  &gresc    &none      &none    &LS(LG(N4)) &none     &none    &none    &none  &none     &kp BSPC &trans
-&trans  &kp TAB   &sk LCTRL  &sk LALT &sk LGUI    &none     &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RET  &trans
-&trans  &shift_cw &none      &none    &none       &none     &none    &none    &none  &none     &to TILING    &trans
-                    &none   &to DEFAULT &trans    &trans  &none  &trans
+&trans  &gresc    &none      &none     &kp LS(LG(N4)) &kp LS(LG(N5))     &none    &none    &none  &none     &kp BSPC   &trans
+&trans  &kp TAB   &sk LCTRL  &sk LALT  &sk LGUI       &none              &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RET    &trans
+&trans  &shift_cw &kp LG(X)  &kp LG(C) &kp LG(V)      &none              &none    &none    &none  &none     &to TILING &trans
+                    &sk LGUI &to DEFAULT &trans       &trans  &none  &sk LALT
                         >;
                 };
 
@@ -121,8 +121,8 @@
                 tiling_layer {
                         bindings = <
 &none &none &none        &none &none         &none     &none        kpLCA(U)    kpLCA(I)    kpLCA(O)     &none         &none
-&none &none &kp LC(LEFT) &none &kp LC(RIGHT) &none     &none        kpLCA(J)    kpLCA(K)    kpLCA(L)     &mo CONFIG    &none
-&none &none &none        &none &none         &none     kpLCAG(LEFT) kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) kpLCAG(RIGHT) &none
+&none &none &kp LC(LEFT) &none &kp LC(RIGHT) &none     kpLCAG(LEFT) kpLCA(J)    kpLCA(K)    kpLCA(L)     kpLCAG(RIGHT) &none
+&none &none &none        &none &none         &none     &none        kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) &mo CONFIG    &none
                        &none   &to DEFAULT  &trans     &none  &none  &none
                         >;
                 };
