@@ -45,7 +45,7 @@
                     label = "STICKY_LAYER_DOUBLE_TAP_TO_LAYER_RAISE";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&sk RAISE>, <&to RAISE>;
+                    bindings = <&sl RAISE>, <&to RAISE>;
            };
            my_gresc: grave_escape {
                     compatible = "zmk,behavior-mod-morph";
