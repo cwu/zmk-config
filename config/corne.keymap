@@ -14,13 +14,17 @@
 #define RAISE     1
 #define MOD_MOVE  2
 #define CONFIG    3
-#define TILING    4
+#define WINDOW    4
 
 #define kpLCA(keycode) &kp LC(LA(keycode))
 #define kpLCAG(keycode) &kp LC(LA(LG(keycode)))
 
 &mt {
     tapping-term-ms = <400>;
+};
+
+&sk {
+    release-after-ms = <10000>;
 };
 
 &sl {
@@ -76,7 +80,7 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U &kp I      &kp O    &kp P    &kp BSPC
    &gresc    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K      &kp L    &kp SEMI &kp SQT
    &shift_cw &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA  &kp DOT  &kp FSLH &shift_cw
-            &sk MOD_MOVE &kp SPACE &shift_cw   &kp RET &to RAISE &sk RCTRL
+            &sl MOD_MOVE &mt LG(SPACE) SPACE &shift_cw   &kp RET &to RAISE &sk RCTRL
                         >;
                 };
 
@@ -88,9 +92,9 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &trans      &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
-   &to DEFAULT &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &trans      &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &trans      &kp N6   &kp N7 &kp N8   &kp N9   &kp N0      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                         &none &trans   &trans      &trans   &to MOD_MOVE   &trans
+                         &sk LGUI &to DEFAULT   &trans      &trans   &to MOD_MOVE   &trans
                         >;
                 };
 
@@ -98,8 +102,8 @@
                         bindings = <
 &trans  &gresc    &none      &none     &kp LS(LG(N4)) &kp LS(LG(N5))     &none    &none    &none  &none     &kp BSPC   &trans
 &trans  &kp TAB   &sk LCTRL  &sk LALT  &sk LGUI       &none              &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RET    &trans
-&trans  &shift_cw &kp LG(X)  &kp LG(C) &kp LG(V)      &none              &none    &none    &none  &none     &to TILING &trans
-                    &sk LGUI &to DEFAULT &trans       &trans  &none  &sk LALT
+&trans  &shift_cw &kp LG(X)  &kp LG(C) &kp LG(V)      &none              &none    &none    &none  &none     &to WINDOW &trans
+                    &sk LGUI &to DEFAULT &trans       &trans  &mo CONFIG &sk LALT
                         >;
                 };
 
@@ -118,12 +122,12 @@
                         >;
                 };
 
-                tiling_layer {
+                window_layer {
                         bindings = <
-&none &none &none        &none &none         &none     &none        kpLCA(U)    kpLCA(I)    kpLCA(O)     &none         &none
-&none &none &kp LC(LEFT) &none &kp LC(RIGHT) &none     kpLCAG(LEFT) kpLCA(J)    kpLCA(K)    kpLCA(L)     kpLCAG(RIGHT) &none
-&none &none &none        &none &none         &none     &none        kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) &mo CONFIG    &none
-                       &none   &to DEFAULT  &trans     &none  &none  &none
+&none &none &none    &kp LC(LEFT)  &kp LC(RIGHT) &none      &none        kpLCA(U)    kpLCA(I)    kpLCA(O)     &none         &none
+&none &none &kt LGUI &kp LS(GRAVE) &kp GRAVE     &none      kpLCAG(LEFT) kpLCA(J)    kpLCA(K)    kpLCA(L)     kpLCAG(RIGHT) &none
+&none &none &kt LGUI &kp LS(TAB)   &kp TAB       &none      &none        kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) &none         &none
+                       &none   &to DEFAULT  &trans             &none  &none  &none
                         >;
                 };
 
