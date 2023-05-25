@@ -43,7 +43,7 @@
            sl_to: sticky_layer_to_layer {
                     compatible = "zmk,behavior-tap-dance";
                     label = "STICKY_LAYER_DOUBLE_TAP_TO_LAYER";
-                    #binding-cells = <0>;
+                    #binding-cells = <1>;
                     tapping-term-ms = <200>;
                     bindings = <&sk>, <&to>;
            };
