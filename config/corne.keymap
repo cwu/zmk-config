@@ -80,29 +80,29 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U &kp I      &kp O    &kp P    &kp BSPC
    &gresc    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K      &kp L    &kp SEMI &kp SQT
    &shift_cw &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA  &kp DOT  &kp FSLH &shift_cw
-            &sl MOD_MOVE &mt LG(SPACE) SPACE &shift_cw   &kp RET &to RAISE &sk RCTRL
+            &sl MOD_MOVE &mt LG(SPACE) SPACE &shift_cw   &kp RET &sl RAISE &sk RCTRL
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | CTRL |  1  |  2  |  3  |  4  |  5  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |  6  |  7  |  8  |  9  |  0  |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    |  MM | DEF | SPC |   | ENT | RSE | CTL |
                         bindings = <
    &trans      &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
    &trans      &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &trans      &kp N6   &kp N7 &kp N8   &kp N9   &kp N0      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                         &sk LGUI &to DEFAULT   &trans      &trans   &to MOD_MOVE   &trans
+                      &to MOD_MOVE &to DEFAULT   &trans      &trans   &to RAISE   &trans
                         >;
                 };
 
                 mod_move_layer {
                         bindings = <
-&trans  &gresc    &none      &none     &kp LS(LG(N4)) &kp LS(LG(N5))     &none    &none    &none  &none     &kp BSPC   &trans
-&trans  &kp TAB   &sk LCTRL  &sk LALT  &sk LGUI       &none              &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RET    &trans
-&trans  &shift_cw &kp LG(X)  &kp LG(C) &kp LG(V)      &none              &none    &none    &none  &none     &to WINDOW &trans
+&trans  &gresc    &none      &none     &kp LS(LG(N4)) &kp LS(LG(N5))     &kp CARET &kp LS(LG(U)) &none  &none     &kp BSPC   &trans
+&trans  &kp TAB   &sk LCTRL  &sk LALT  &sk LGUI       &none              &kp LEFT  &kp DOWN      &kp UP &kp RIGHT &kp RET    &trans
+&trans  &shift_cw &kp LG(X)  &kp LG(C) &kp LG(V)      &none              &none     &none         &none  &kp GT    &to WINDOW &trans
                     &sk LGUI &to DEFAULT &trans       &trans  &mo CONFIG &sk LALT
                         >;
                 };
