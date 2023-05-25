@@ -75,8 +75,8 @@
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U &kp I      &kp O    &kp P    &kp BSPC
    &gresc    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K      &kp L    &kp SEMI &kp SQT
-   &shift_cw &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA  &kp DOT  &kp FSLH &sk RALT
-            &sl RAISE &kp SPACE &sk LSHIFT   &kp RET &sl MOD_MOVE &sk RCTRL
+   &shift_cw &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA  &kp DOT  &kp FSLH &shift_cw
+            &sk MOD_MOVE &kp SPACE &shift_cw   &kp RET &to RAISE &sk RCTRL
                         >;
                 };
 
@@ -90,16 +90,16 @@
    &trans      &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
    &to DEFAULT &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &trans      &kp N6   &kp N7 &kp N8   &kp N9   &kp N0      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                         &none &trans   &trans      &trans   &mo CONFIG   &trans
+                         &none &trans   &trans      &trans   &to MOD_MOVE   &trans
                         >;
                 };
 
                 mod_move_layer {
                         bindings = <
-&none  &gresc    &none      &none    &none    &none     &none    &none    &none  &none     &kp BSPC &none
-&trans &kp TAB   &sk LCTRL  &sk LALT &sk LGUI &none     &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RET  &none
-&none  &shift_cw &none      &none    &none    &none     &none    &none    &none  &none     &none    &none
-                    &none   &mo CONFIG  &to DEFAULT     &none  &to TILING  &none
+&trans  &gresc    &none      &none    &LS(LG(N4)) &none     &none    &none    &none  &none     &kp BSPC &trans
+&trans  &kp TAB   &sk LCTRL  &sk LALT &sk LGUI    &none     &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RET  &trans
+&trans  &shift_cw &none      &none    &none       &none     &none    &none    &none  &none     &to TILING    &trans
+                    &none   &to DEFAULT &trans    &trans  &none  &trans
                         >;
                 };
 
@@ -114,16 +114,16 @@
 &sys_reset  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR &none   &none   &none  &sys_reset  &none
 &none       &to DEFAULT  &none        &none         &kp N0       &none          &none      &none   &none   &none  &none       &none
 &none       &bootloader  &out OUT_BLE &out OUT_USB  &none        &none          &none      &none   &none   &none  &bootloader &none
-                                              &none     &trans   &to DEFAULT    &none  &trans   &none
+                                         &none     &to DEFAULT  &trans     &none  &none   &none
                         >;
                 };
 
                 tiling_layer {
                         bindings = <
 &none &none &none        &none &none         &none     &none        kpLCA(U)    kpLCA(I)    kpLCA(O)     &none         &none
-&none &none &kp LC(LEFT) &none &kp LC(RIGHT) &none     &none        kpLCA(J)    kpLCA(K)    kpLCA(L)     &none         &none
+&none &none &kp LC(LEFT) &none &kp LC(RIGHT) &none     &none        kpLCA(J)    kpLCA(K)    kpLCA(L)     &mo CONFIG    &none
 &none &none &none        &none &none         &none     kpLCAG(LEFT) kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) kpLCAG(RIGHT) &none
-                       &none   &trans  &to DEFAULT     &none  &none  &none
+                       &none   &to DEFAULT  &trans     &none  &none  &none
                         >;
                 };
 
