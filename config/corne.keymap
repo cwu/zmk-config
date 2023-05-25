@@ -20,7 +20,7 @@
 #define kpLCAG(keycode) &kp LC(LA(LG(keycode)))
 
 &mt {
-    tapping-term-ms = <400>;
+    tapping-term-ms = <800>;
 };
 
 &sk {
