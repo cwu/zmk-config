@@ -132,8 +132,8 @@
                 window_layer {
                         bindings = <
 &none &none &none    &kp LC(LEFT)  &kp LC(RIGHT) &none      &none        kpLCA(U)    kpLCA(I)    kpLCA(O)     &none         &none
-&none &none &kt LGUI &kp LS(GRAVE) &kp GRAVE     &none      kpLCAG(LEFT) kpLCA(J)    kpLCA(K)    kpLCA(L)     kpLCAG(RIGHT) &none
-&none &none &kt LGUI &kp LS(TAB)   &kp TAB       &none      &none        kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) &none         &none
+&none &none &kp LGUI &kp LS(GRAVE) &kp GRAVE     &none      kpLCAG(LEFT) kpLCA(J)    kpLCA(K)    kpLCA(L)     kpLCAG(RIGHT) &none
+&none &none &kp LGUI &kp LS(TAB)   &kp TAB       &none      &none        kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) &none         &none
                        &none   &to DEFAULT  &trans             &none  &none  &none
                         >;
                 };
