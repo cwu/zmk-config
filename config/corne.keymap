@@ -85,8 +85,8 @@
                 default_layer {
                         bindings = <
      &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U &kp I      &kp O    &kp P    &kp BSPC
-     &gresc    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K      &kp L    &kp SEMI &kp SQT
-     &shift_cw &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA  &kp DOT  &kp FSLH &sk LALT
+     &kp ESC   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K      &kp L    &kp SEMI &kp SQT
+     &kp SHIFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA  &kp DOT  &kp FSLH &sk LALT
             &sl MOD_MOVE &kp SPACE &shift_cw   &kp RET &sl_to_raise &sk RCTRL
                         >;
                 };
@@ -107,9 +107,9 @@
 
                 mod_move_layer {
                         bindings = <
-&trans  &gresc    &kp LS(LG(N2)) &kp LS(LG(N3)) &kp LS(LG(N4)) &kp LS(LG(N5))     &kp CARET &kp LS(LG(U)) &none  &none     &kp BSPC   &trans
+&trans  &kp ESC   &kp LS(LG(N2)) &kp LS(LG(N3)) &kp LS(LG(N4)) &kp LS(LG(N5))     &kp CARET &kp LS(LG(U)) &none  &none     &kp BSPC   &trans
 &trans  &kp TAB   &sk LCTRL  &sk LALT  &sk LGUI       &none              &kp LEFT  &kp DOWN      &kp UP &kp RIGHT &kp RET    &trans
-&trans  &shift_cw &kp LG(X)  &kp LG(C) &kp LG(V)      &none              &none     &none         &none  &kp GT    &to WINDOW &trans
+&trans  &kp LG(Z) &kp LG(X)  &kp LG(C) &kp LG(V)      &none              &none     &none         &none  &kp GT    &to WINDOW &trans
                     &sk LGUI &to DEFAULT &trans       &trans  &mo CONFIG &sk LALT
                         >;
                 };
