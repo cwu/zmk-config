@@ -90,7 +90,7 @@
      &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA  &kp DOT  &kp FSLH &sk LALT
              &sl MOD_MOVE &kp SPACE &shift_cw   &kp RET &sl_to_raise &sk RCTRL
                         >;
-                };
+kjm 7yhgb ghbv tv fdcx                };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
@@ -108,19 +108,19 @@
 
                 mod_move_layer {
                         bindings = <
-&kp LG(TAB) &kp ESC   &kp LG(W)  &kp LS(LG(N3)) &kp LS(LG(N4)) &kp LG(T)      &kp CARET &kp LS(LG(U)) &none  &none     &kp BSPC   &trans
-&trans      &kp LG(A) &sk LCTRL  &sk LALT       &sk LGUI       &none          &kp LEFT  &kp DOWN      &kp UP &kp RIGHT &kp RET    &kp LG(GRAVE)
-&trans      &kp LG(Z) &kp LG(X)  &kp LG(C)      &kp LG(V)      &none          &kp LG(N) &none         &none  &kp GT    &to WINDOW &trans
+&kp LG(TAB)    &kp ESC   &kp LG(W)  &kp LS(LG(N3)) &kp LS(LG(N4)) &kp LG(T)      &kp CARET &kp LS(LG(U)) &none  &none     &kp BSPC   &trans
+&kp LG(LS(TAB) &kp LG(A) &sk LCTRL  &sk LALT       &sk LGUI       &none          &kp LEFT  &kp DOWN      &kp UP &kp RIGHT &kp RET    &kp LG(GRAVE)
+&trans         &kp LG(Z) &kp LG(X)  &kp LG(C)      &kp LG(V)      &none          &kp LG(N) &none         &none  &kp GT    &to WINDOW &trans
                     &sk LGUI &to DEFAULT &trans       &trans  &mo CONFIG &sk LALT
                         >;
                 };
 
                 window_media_layer {
                         bindings = <
-&none &kp C_VOL_UP &kp C_NEXT       &kp LC(LEFT)  &kp LC(RIGHT) &none      &none        kpLCA(U)    kpLCA(I)    kpLCA(O)     &none         &none
-&none &kp C_VOL_DN &kp C_PLAY_PAUSE &kp LS(GRAVE) &kp GRAVE     &none      kpLCAG(LEFT) kpLCA(J)    kpLCA(K)    kpLCA(L)     kpLCAG(RIGHT) &none
-&none &kp C_MUTE   &kp C_PREV       &kp LS(TAB)   &kp TAB       &none      &none        kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) &none         &none
-                       &sk LGUI   &to DEFAULT  &trans    &none  &to CONFIG  &none
+&kp LG(TAB)    &kp C_VOL_UP &kp C_NEXT       &kp LC(LEFT)  &kp LC(RIGHT) &none      &kp LC(LEFT) kpLCA(U)    kpLCA(I)    kpLCA(O)     &kp LC(RIGHT) &none
+&kp LG(LS(TAB) &kp C_VOL_DN &kp C_PLAY_PAUSE &kp LS(GRAVE) &kp GRAVE     &none      kpLCAG(LEFT) kpLCA(J)    kpLCA(K)    kpLCA(L)     kpLCAG(RIGHT) &none
+&none          &kp C_MUTE   &kp C_PREV       &kp LS(TAB)   &kp TAB       &none      &none        kpLCA(LEFT) kpLCA(DOWN) kpLCA(RIGHT) &none         &none
+                       &sk LGUI   &to DEFAULT  &trans    kpLCA(RET) &to CONFIG  &none
                         >;
                 };
 
