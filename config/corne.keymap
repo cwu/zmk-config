@@ -90,7 +90,7 @@
      &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA  &kp DOT  &kp FSLH &sk LALT
              &sl MOD_MOVE &kp SPACE &shift_cw   &kp RET &sl_to_raise &sk RCTRL
                         >;
-kjm 7yhgb ghbv tv fdcx                };
+                };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
