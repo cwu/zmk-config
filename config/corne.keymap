@@ -108,9 +108,9 @@
 
                 mod_move_layer {
                         bindings = <
-&kp LG(TAB)    &kp ESC   &kp LG(W)  &kp LS(LG(N3)) &kp LS(LG(N4)) &kp LG(T)      &kp CARET &kp LS(LG(U)) &none  &none     &kp BSPC   &trans
-&kp LG(LS(TAB) &kp LG(A) &sk LCTRL  &sk LALT       &sk LGUI       &none          &kp LEFT  &kp DOWN      &kp UP &kp RIGHT &kp RET    &kp LG(GRAVE)
-&trans         &kp LG(Z) &kp LG(X)  &kp LG(C)      &kp LG(V)      &none          &kp LG(N) &none         &none  &kp GT    &to WINDOW &trans
+&kp LG(TAB)     &kp ESC   &kp LG(W)  &kp LS(LG(N3)) &kp LS(LG(N4)) &kp LG(T)      &kp CARET &kp LS(LG(U)) &none  &none     &kp BSPC   &trans
+&kp LG(LS(TAB)) &kp LG(A) &sk LCTRL  &sk LALT       &sk LGUI       &none          &kp LEFT  &kp DOWN      &kp UP &kp RIGHT &kp RET    &kp LG(GRAVE)
+&trans          &kp LG(Z) &kp LG(X)  &kp LG(C)      &kp LG(V)      &none          &kp LG(N) &none         &none  &kp GT    &to WINDOW &trans
                     &sk LGUI &to DEFAULT &trans       &trans  &mo CONFIG &sk LALT
                         >;
                 };
